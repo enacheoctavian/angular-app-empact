@@ -1,0 +1,24 @@
+<mat-card class="big-wrapper">
+    <h2>Software versioning number parser:</h2>
+    <div class="parser-form">
+        <form (submit)="onAddParsingSession(vpForm)" #vpForm="ngForm">
+            <mat-form-field>
+                <mat-label>Version number</mat-label>
+                <input matInput placeholder="Of format : `2.4.254`" name="input" ngModel>
+            </mat-form-field>
+            <div class="button-wrapper">
+                <button mat-raised-button type="submit" color="accent">Parse</button>
+            </div>
+        </form>
+    </div>
+
+    <mat-card class="output" *ngFor="let item of svp">
+        <ul>
+            <li>Your input: {{ item.input }}</li>
+            <li>Major: {{ item.major }}</li>
+            <li>Minor: {{ item.minor }}</li>
+            <li>Bugfix: {{ item.bugfix }}</li>
+        </ul>
+
+    </mat-card>
+</mat-card>

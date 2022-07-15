@@ -1,0 +1,41 @@
+.big-wrapper {
+
+    width: 85%;
+    margin: auto;
+    height: 40rem;
+    overflow: auto;
+}
+
+button {
+    display: flex;
+
+}
+
+.parser-form {
+    display: flex;
+    margin: auto;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: right;
+}
+
+.parser-form {
+    display: flex;
+    justify-content: center;
+}
+
+
+mat-form-field {
+    width: 100%;
+}
+
+form {
+    width: 70%;
+}
+
+.output {
+    background-color: #f1faee;
+    margin-top: 1rem;
+}

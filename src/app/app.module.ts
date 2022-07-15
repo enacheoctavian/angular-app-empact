@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +10,11 @@ import { HeaderComponent } from './header/header.component';
 import { NewsComponent } from './news/news.component';
 import { MatExpansionModule } from "@angular/material/expansion";
 import { MatCardModule } from '@angular/material/card';
+import { SidequestComponent } from './sidequest/sidequest.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
+
 
 
 @NgModule({
@@ -16,6 +22,7 @@ import { MatCardModule } from '@angular/material/card';
     AppComponent,
     HeaderComponent,
     NewsComponent,
+    SidequestComponent,
 
   ],
   imports: [
@@ -24,8 +31,11 @@ import { MatCardModule } from '@angular/material/card';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatExpansionModule,
-    MatCardModule
-
+    MatCardModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatButtonModule,
+    FormsModule
 
 
   ],
