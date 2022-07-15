@@ -1,0 +1,18 @@
+:host {
+    display: block;
+    margin-top: 2rem;
+}
+
+.info-text {
+    text-align: center;
+}
+
+.things {
+    width: 70%;
+    margin: auto;
+    margin-top: 1rem;
+}
+
+mat-paginator {
+    margin-top: 1rem;
+}

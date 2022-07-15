@@ -1,0 +1,12 @@
+<mat-accordion multi="true" *ngIf="news.length > 0">
+    <mat-expansion-panel class="things" *ngFor="let item of news">
+        <mat-expansion-panel-header>
+            {{ item.title }}
+        </mat-expansion-panel-header>
+        <p> Author: {{ item.author }}</p>
+        <p> Date:{{ item.date }}</p>
+        <hr>
+        <p> {{ item.content }}</p>
+    </mat-expansion-panel>
+</mat-accordion>
+<p class="info-text mat-body-1" *ngIf="news.length <= 0 ">No news available!</p>
