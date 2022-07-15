@@ -2,12 +2,15 @@
 
     width: 85%;
     margin: auto;
-    height: 40rem;
+    height: 30rem;
     overflow: auto;
+    background-color: #f5ebe0;
 }
 
 button {
-    display: flex;
+    background-color: #344e41;
+    color: white;
+    font-size: large;
 
 }
 
@@ -38,4 +41,9 @@ form {
 .output {
     background-color: #f1faee;
     margin-top: 1rem;
+}
+
+mat-card-title {
+    color: #344e41;
+    font-weight: 700;
 }

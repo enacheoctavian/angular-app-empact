@@ -4,10 +4,9 @@ span {
     width: 100%;
     font-size: 30px;
     display: flex;
-    transition: transform 0.4s;
+    color: #f5ebe0;
 }
 
-span:hover {
-    color: #00f6ef;
-    transform: scale(1.1);
+mat-toolbar {
+    background-color: #344e41;
 }

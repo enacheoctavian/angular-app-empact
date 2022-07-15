@@ -20,6 +20,8 @@ export class SidequestComponent {
       minor: chars[1],
       bugfix: chars[2]
     }
+
+
     this.svp.push(temp);
   }
 
