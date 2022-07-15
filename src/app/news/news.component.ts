@@ -9,23 +9,38 @@ import { News } from './news.model';
 })
 export class NewsComponent implements OnInit {
 
+  url = "https://rss.nytimes.com/services/xml/rss/nyt/World.xml";
   news: News[] = [];
 
 
-  test: News = {
-    title: 'Atac sangeros',
-    author: 'Reporter',
-    content: 'Test',
-    date: 'today'
-  };
-  totalNews = 10;
-  newsPerPage = 5;
-  currentPage = 1;
-  pageSizeOptions = [1, 2, 5, 10];
+
+
   ngOnInit(): void {
-    this.news.push(this.test);
 
+    let xmlContent = '';
 
+    fetch(this.url).then((response) => {
+      response.text().then((xml) => {
+        xmlContent = xml;
+
+        let parser = new DOMParser();
+        let xmlDOM = parser.parseFromString(xmlContent, 'application/xml');
+        let news = xmlDOM.querySelectorAll('item');
+
+        news.forEach(newsXmlNode => {
+          let test = {
+            title: '',
+            author: '',
+            content: '',
+            date: ''
+          };
+          test.title = newsXmlNode.querySelectorAll('title')[0].innerHTML;
+          test.date = newsXmlNode.querySelectorAll('pubDate')[0].innerHTML;
+          test.author = newsXmlNode.children[5].innerHTML;
+          test.content = newsXmlNode.querySelectorAll('description')[0].innerHTML;
+          this.news.push(test);
+        });
+      });
+    });
   }
-
 }
