@@ -7,8 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { HeaderComponent } from './header/header.component';
 import { NewsComponent } from './news/news.component';
-import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatExpansionModule } from "@angular/material/expansion";
+import { MatCardModule } from '@angular/material/card';
 
 
 @NgModule({
@@ -24,7 +24,7 @@ import { MatExpansionModule } from "@angular/material/expansion";
     BrowserAnimationsModule,
     MatToolbarModule,
     MatExpansionModule,
-    MatPaginatorModule,
+    MatCardModule
 
 
 

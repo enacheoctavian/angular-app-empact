@@ -1,6 +1,13 @@
 span {
-    margin-left: 30px;
+    margin-left: 5rem;
     display: inline-block;
     width: 100%;
     font-size: 30px;
+    display: flex;
+    transition: transform 0.4s;
+}
+
+span:hover {
+    color: #00f6ef;
+    transform: scale(1.1);
 }
