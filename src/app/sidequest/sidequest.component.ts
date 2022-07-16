@@ -9,7 +9,8 @@ import { Svp } from './svp.model';
 })
 export class SidequestComponent {
   svp: Svp[] = [];
-
+  //function that gets called every time the ,,Parse" button is pressed
+  //formats the input the the way we want and checks if the input was the right format
   onAddParsingSession(form: NgForm) {
     var input = form.value.input;
     const chars = form.value.input.split(".");

@@ -8,10 +8,12 @@ import { News } from './news.model';
   styleUrls: ['./news.component.css']
 })
 export class NewsComponent implements OnInit {
-
+  //api url
   url = "https://rss.nytimes.com/services/xml/rss/nyt/World.xml";
   news: News[] = [];
 
+
+  //function that gets called every time someone pressed the refresh news button, empties the array and starts fetching the newest data from the api
   onRefreshNews() {
     this.news = [];
     let xmlContent = '';
@@ -36,13 +38,12 @@ export class NewsComponent implements OnInit {
           test.author = newsXmlNode.children[5].innerHTML;
           test.content = newsXmlNode.querySelectorAll('description')[0].innerHTML;
           this.news.push(test);
-          console.log("test");
         });
       });
     });
   }
 
-
+  //onInit populates the news array upon reaching the page
   ngOnInit(): void {
 
     let xmlContent = '';
@@ -54,7 +55,7 @@ export class NewsComponent implements OnInit {
         let parser = new DOMParser();
         let xmlDOM = parser.parseFromString(xmlContent, 'application/xml');
         let news = xmlDOM.querySelectorAll('item');
-
+        //we transform the xml into a DOM-like object from which we extract our desired information
         news.forEach(newsXmlNode => {
           let test = {
             title: '',
