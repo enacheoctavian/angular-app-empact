@@ -1,12 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;1,400;1,600;1,700&display=swap');
+
 span {
-    margin-left: 5rem;
-    display: inline-block;
     width: 100%;
     font-size: 30px;
-    display: flex;
     color: #f5ebe0;
+    font-family: 'Josefin Sans', sans-serif;
+
 }
 
 mat-toolbar {
     background-color: #344e41;
+    display: flex;
+    justify-content: space-between;
+}
+
+a {
+    width: 100%;
+    font-size: 30px;
+    color: #f5ebe0;
+    font-family: 'Josefin Sans', sans-serif;
+    text-decoration: none;
+    text-align: right;
 }
