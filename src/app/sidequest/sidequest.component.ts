@@ -20,9 +20,12 @@ export class SidequestComponent {
       minor: chars[1],
       bugfix: chars[2]
     }
-
-
-    this.svp.push(temp);
+    if (isNaN(chars[0]) || isNaN(chars[1]) || isNaN(chars[2])) {
+      alert("Invalid format");
+      return;
+    }
+    else
+      this.svp.push(temp);
   }
 
 }
