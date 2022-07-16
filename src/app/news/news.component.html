@@ -1,5 +1,8 @@
 <mat-card>
     <mat-card-title> Today's news: </mat-card-title>
+    <div class="buttonWrapper">
+        <button mat-button (click)="onRefreshNews()">Refresh news</button>
+    </div>
     <mat-accordion multi="true" *ngIf="news.length > 0">
         <mat-expansion-panel class="things" *ngFor="let item of news">
             <mat-expansion-panel-header>

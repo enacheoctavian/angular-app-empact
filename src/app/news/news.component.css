@@ -41,7 +41,17 @@ hr {
     margin-top: 0.5rem;
 }
 
+button {
+    color: #344e41;
+
+}
+
 mat-card-title {
     color: #344e41;
     font-weight: 700;
+}
+
+.buttonWrapper {
+    display: flex;
+    justify-content: right;
 }
